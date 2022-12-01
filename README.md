@@ -61,3 +61,7 @@ public void CrashOnAndroid()
 			var exceptionHandler = mainThread.Call<AndroidJavaObject>("getUncaughtExceptionHandler");
 			exceptionHandler.Call("uncaughtException", mainThread, exception);
 		}
+		
+Method 4: For unity or c#:
+using UnityEngine.Diagnostics;
+Utils.ForceCrash(ForcedCrashCategory.Abort);
